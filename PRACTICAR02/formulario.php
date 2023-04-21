@@ -9,7 +9,7 @@ if(isset($_GET["peli1"]) && isset($_GET["peli2"]) && isset($_GET["peli3"])) {
             setcookie("peli1", $peli1, time() + 60 * 60 * 24 * 7);
             setcookie("peli2", $peli2, time() + 60 * 60 * 24 * 7);
             setcookie("peli3", $peli3, time() + 60 * 60 * 24 * 7);
-            header("location:index.php");
+            header("location:listar.php");
         }
         else {
             setcookie("error","El rango debe ser del 1 al 10");
@@ -19,5 +19,5 @@ if(isset($_GET["peli1"]) && isset($_GET["peli2"]) && isset($_GET["peli3"])) {
         setcookie("error","Los datos tienen que ser numéricos");
     }
 }
-header("location:index.php");
+header("location:listar.php");
 ?>
