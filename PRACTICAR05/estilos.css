@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 1%;
+}
+h1{
+    font-family: "Berlin Sans FB Demi";
+    text-align: center;
+    font-size: 45px;
+}
+form{
+    width: 100%;
+}
+input{
+    margin-right: 10%;
+    width: 99.4%;
+    height: 25px;
+}
+button{
+    width: 100%;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+li{
+    list-style: none;
+    border: 1px solid grey;
+    padding: 15px;
+}
+li{
+    font-size: 25px;
+}
+p{
+    color: red;
+}
+.titulo{
+    float: right;
+    color:white;
+    text-decoration: none;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.borrar{
+    background-color: red;
+    color: white;
+    width: 90px;
+    border-radius: 5px;
+    float: left;
+    padding: 7px;
+    text-decoration: none;
+}
+a.cerrar{
+    background-color: #b0b00f;
+    color: white;
+    width: 100spx;
+    border-radius: 5px;
+    float: left;
+    padding: 7px;
+    text-decoration: none;
+}
