@@ -1,5 +1,14 @@
 <?php
+session_start();
 include_once "bd.php";
+if(isset($_SESSION["id_usuario"]) &&
+    isset($_SESSION["nombre"])){
+    $id_usuario=$_SESSION["id_usuario"];
+    $nombre=$_SESSION["nombre"];
+}
+else{
+    header("Location:index.php");
+}
 ?>
 
 <!doctype html>
@@ -17,7 +26,6 @@ include_once "bd.php";
 <section>
     <form action="nueva.php" method="post">
         <input type="text" name="tarea" id="tarea" placeholder="Escriba una nueva tarea">
-        <label for="tarea" id="tarea"></label><br>
         <button type="submit">Añadir</button>
     </form>
 </section>
@@ -27,8 +35,10 @@ include_once "bd.php";
         <?php
         try{
             $con=getConexion();
-            $sql="SELECT id_tarea,titulo FROM tareas";
+            $sql="SELECT id_tarea,titulo FROM tareas
+                    WHERE id_usuario=?";
             $st=$con->prepare($sql);
+            $st->bind_param("i",$id_usuario);
             $st->execute();
             $st->bind_result($id,$titulo);
             while($st->fetch()){

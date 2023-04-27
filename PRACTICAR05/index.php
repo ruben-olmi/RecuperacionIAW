@@ -16,9 +16,7 @@ include_once "bd.php";
 <section>
 <form action="login.php" method="post">
     <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre de usuario">
-    <label for="nombre" id="nombre"></label><br>
     <input type="password" name="password" id="password" placeholder="Escriba su contraseña">
-    <label for="password" id="password"></label><br>
     <button type="submit">Entrar</button>
     <br>
 </form>
