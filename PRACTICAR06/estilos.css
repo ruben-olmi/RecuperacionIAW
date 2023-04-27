@@ -1,0 +1,25 @@
+a{
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: blue;
+}
+a:hover{
+    background-color: blue;
+    color: white;
+}
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+th, tr, td {
+    width: 25%;
+    text-align: left;
+    padding: 0.3em;
+    border-bottom: 1px solid grey;
+}
+th {
+    background: #eee;
+}
+mark{
+    background-color: #89c9b7;
+}
