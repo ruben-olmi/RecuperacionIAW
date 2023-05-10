@@ -1,8 +1,20 @@
 <?php
 include_once "bd.php";
-$letra='A';
+$letra="A";
+$orden="localidad";
+$o=1;
 if(isset($_GET["letra"])){
     $letra=$_GET["letra"];
+}
+if(isset($_GET["orden"])){
+    if($_GET["orden"]=='2') {
+        $orden="provincia,localidad";
+        $o=2;
+    }
+    elseif($_GET["orden"]=='3') {
+        $orden="poblacion desc";
+        $o=3;
+    }
 }
 ?>
 <!doctype html>
@@ -22,7 +34,7 @@ if(isset($_GET["letra"])){
         <?php
         for($i = 65; $i <= 90; $i++) {
             $abc=chr($i);
-            echo "<a href='index.php?letra=$abc'>";
+            echo "<a href='index.php?letra=$abc&orden=$o'>";
             if($letra==$abc){
                 echo "<mark>$abc</mark>";
             }
@@ -37,18 +49,20 @@ if(isset($_GET["letra"])){
 <?php
     try {
         $con = getConexion();
-        $sql = "select l.nombre as localidad,p.nombre as provincia,l.poblacion
-                from localidades l
-                join provincias p using(n_provincia)
-                where upper(l.nombre) like '$letra%'
-                order by localidad asc";
+        $sql = "SELECT l.nombre localidad,poblacion, ".
+            "p.nombre provincia ".
+            "FROM localidades l ".
+            "JOIN provincias p USING(n_provincia) ".
+            "WHERE INSTR(l.nombre,?)=1 ".
+            "ORDER BY $orden ";
         $st = $con->prepare($sql);
+        $st->bind_param("s",$letra);
         $st->execute();
-        $st->bind_result($localidad, $provincia, $poblacion);
+        $st->bind_result($localidad, $poblacion, $provincia);
         echo "<table>";
-        echo "<th><a href='index.php'>Localidad</a></th>";
-        echo "<th><a href='index.php'>Provincia</a></th>";
-        echo "<th><a href='index.php'>Poblacion</a></th>";
+        echo "<th><a href='index.php?orden=1&letra=$letra'>Localidad</a></th>";
+        echo "<th><a href='index.php?orden=2&letra=$letra'>Provincia</a></th>";
+        echo "<th><a href='index.php?orden=3&letra=$letra'>Poblacion</a></th>";
         while ($st->fetch()) {
             echo "<tr>";
             echo "<td>$localidad";

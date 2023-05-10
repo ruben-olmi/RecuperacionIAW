@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<aside>
+    <section>
+        <h2>Fondo</h2>
+        <label for="rojo">Rojo</label>
+        <input type="number" name="rojo" id="rojo" value="255">
+        <label for="verde">Verde</label>
+        <input type="number" name="verde" id="verde" value="255">
+        <label for="azul">Azul</label>
+        <input type="number" name="azul" id="azul" value="255">
+    </section>
+    <section>
+        <h2>Mosca</h2>
+        <label for="x">Posicion x</label>
+        <input type="number" name="x" id="x" value="0">
+        <label for="y">Posicion y</label>
+        <input type="number" name="y" id="y" value="0">
+        <br><br>
+        <label for="r">Rotación</label>
+        <input type="number" name="r" id="r">
+        <button>nueva mosca</button>
+    </section>
+</aside>
+<img src="img/mosca.svg" id="mosca">
+<script src="action.js"></script>
+</body>
+</html>

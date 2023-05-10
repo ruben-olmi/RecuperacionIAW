@@ -1,0 +1,27 @@
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #cbc1c1;
+    text-align: center;
+}
+section{
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    vertical-align: top;
+}
+input{
+    width: 65px;
+}
+h2{
+    margin: 0;
+}
+#mosca{
+    position: absolute;
+    top: 100px;
+    width: 80px;
+    height: 80px;
+}

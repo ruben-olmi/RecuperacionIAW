@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius, harum molestiae obcaecati officiis quam
+    ratione sint vel? Iure, mollitia, veniam! Ab eius laborum ratione recusandae repudiandae similique suscipit
+    unde.</p>
+<p>At doloremque eius modi nobis quis. Adipisci, cum, debitis dignissimos dolor dolores ducimus eos excepturi illum
+    inventore iste maxime nemo possimus quas quod quos rem velit? Distinctio maxime minima vero.</p>
+<p>A commodi corporis dolor, doloremque eaque est explicabo fuga hic illo ipsa iusto magnam molestiae necessitatibus
+    nulla pariatur perferendis repudiandae soluta vero. Beatae dolore molestias nam nostrum quae, quod voluptatum!</p>
+<p>Atque fugit ipsam magni non quod. Alias ex expedita magnam minima nostrum provident quam vitae. Consectetur deleniti
+    id impedit ipsum iure officia perspiciatis, placeat rerum sint unde velit veritatis vero.</p>
+<p>Assumenda autem commodi cupiditate deleniti dicta eius, esse excepturi exercitationem fuga, fugit ipsa laboriosam
+    minima minus modi nisi nobis nostrum odit porro quae quas quisquam recusandae saepe sapiente sed totam?</p>
+<p>Eos explicabo fuga, nisi nostrum odit optio sed sint temporibus. Aspernatur dolore dolores exercitationem expedita
+    fugiat, hic ipsum iste iusto laboriosam numquam perferendis repellendus reprehenderit tempore ut voluptate. Non,
+    voluptas?</p>
+<p>Alias architecto consequatur corporis doloremque dolores doloribus enim error et facere fugit in laudantium libero
+    nihil possimus provident quam quibusdam quidem, repudiandae unde veritatis. Doloremque et illo libero minus
+    saepe?</p>
+<p>Accusantium architecto asperiores aspernatur atque fuga fugiat praesentium, repudiandae soluta sunt veniam? Ab amet,
+    aperiam asperiores consequuntur cumque cupiditate explicabo facere, ipsa nemo nihil praesentium quibusdam soluta
+    tempore vel, velit!</p>
+<p>Aliquid beatae debitis ea enim, est exercitationem explicabo facilis fugit impedit natus nesciunt pariatur,
+    perferendis porro possimus quo quod sequi. Commodi ducimus enim ex facilis illum libero saepe voluptatem
+    voluptatum!</p>
+<p>At eligendi ex id illo laboriosam, quibusdam soluta. Atque consequuntur debitis, ea provident recusandae repellat.
+    Accusamus accusantium aspernatur delectus dolor ducimus ex ipsam maiores modi nesciunt non omnis, vero
+    voluptatibus.</p>
+<p>Alias aspernatur commodi debitis doloremque earum expedita non, quasi qui sunt vel! Eum id, provident? Eos ex
+    excepturi nihil obcaecati omnis quasi quia, repellat rerum sit temporibus ullam, vel voluptate.</p>
+<p>Dignissimos excepturi in voluptatum. Alias commodi corporis cumque earum, error esse, fugit, harum impedit labore
+    libero molestias nobis placeat quasi qui sed sit tenetur voluptatibus! Eos ex nisi possimus qui!</p>
+<p>Ad aliquid aperiam, at atque, delectus dignissimos dolor dolore fugiat fugit id illo, nihil nisi odit quae
+    reprehenderit sit tempora tempore temporibus voluptas voluptatum? Est fugit labore magnam modi pariatur?</p>
+<p>Aperiam asperiores deleniti, doloribus hic iusto minus, nobis numquam placeat possimus provident quae, quam quod
+    sapiente tempora voluptatum? Corporis enim eos error id illum modi, natus quaerat quibusdam similique tenetur!</p>
+<p>Ad adipisci deserunt, eligendi enim illum labore molestiae nesciunt nobis, obcaecati porro quam quia quis sapiente,
+    sunt ut? Corporis culpa dolorum esse facere illum incidunt iste quae quasi sequi voluptate!</p>
+<p>Eos, molestiae, ullam? Debitis ea facere harum iure molestiae mollitia perspiciatis quam quas? Alias molestiae optio
+    recusandae repellendus totam ut, velit? Eius enim fugit mollitia nostrum officiis perferendis quia repellat!</p>
+<p>Ad adipisci amet animi at cupiditate debitis deserunt doloremque doloribus error esse, facilis laboriosam laborum
+    maxime minus, molestiae natus necessitatibus nostrum odio pariatur, provident quod repudiandae rerum tempore? Natus,
+    quidem!</p>
+<p>A animi asperiores assumenda consectetur cumque dicta distinctio, enim exercitationem facilis fuga illum libero nam
+    odio quo quos sunt tempora. Aliquid commodi harum itaque laboriosam nihil sapiente voluptatum? Fugiat, pariatur.</p>
+<p>Doloribus iure modi natus odio rem sapiente, vitae! Ad asperiores commodi consequuntur dolorum ex explicabo in,
+    itaque modi molestias natus nesciunt odio quidem, quisquam repellendus repudiandae, tenetur ullam vero
+    voluptates.</p>
+<p>Alias animi assumenda culpa cupiditate delectus dolorum error et ipsa ipsam minima nemo odio praesentium quisquam rem
+    repudiandae sint velit, veniam vitae! Amet architecto at consequatur in rem sequi veniam.</p>
+<script>
+    window.addEventListener("DOMContentLoaded",function(e) {
+       //todo el codigo que se lanza cuando la pagina esta cargada
+        let parrafos=document.querySelectorAll("p"); //array
+        let primero=true; //centinela
+        for(let parrafo of parrafos){
+            parrafo.addEventListener("click",function(e) {
+                if(primero==true){
+                    parrafo.style.backgroundColor="red";
+                    primero=false;
+                }
+                else{
+                    parrafo.style.backgroundColor="transparent";
+                    primero=true;
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
